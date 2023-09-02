@@ -6,7 +6,7 @@ public class test {
         Scanner again = new Scanner(System.in);
         boolean runAgain = true;
         Scanner input = new Scanner(System.in);
-        System.out.println("test");
+        
 
 
         while (runAgain){
