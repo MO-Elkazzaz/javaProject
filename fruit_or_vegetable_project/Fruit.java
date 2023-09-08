@@ -1,6 +1,6 @@
 public class Fruit {
 
-    String[] fruit = {"appell", "banana", "mango", "strawberry"};
+    String[] fruit = {"apple", "banana", "mango", "strawberry"};
     public static void main(String[] args) {
     }
 
