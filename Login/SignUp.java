@@ -1,14 +1,15 @@
 package Login;
 import java.io.*;
-import com.opencsv.CSVWriter;
+import java.io.BufferedWriter;
 import java.util.Scanner;
+import java.io.IOException;
 public class SignUp {
-    public static void signUp(String csvFile) {
+    public static void signUp(String csvFile)  {
 
         try{
             File file = new File(csvFile);
             FileWriter fw = new FileWriter(file, true);
-            CSVWriter writer = new CSVWriter(fw);
+            BufferedWriter writer = new BufferedWriter(fw);
             Scanner username = new Scanner(System.in);
             Scanner password = new Scanner(System.in);
             Scanner conformPass = new Scanner(System.in);
@@ -32,12 +33,14 @@ public class SignUp {
             }
 
             String[] userData = { usernameVar, passwordVar};
-            writer.writeNext(userData);
+            String dataLine = String.join(",", userData);
+            writer.write(dataLine);
             writer.close();
             System.out.println("you signed up successfully");
         }
         catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("Error occurred while writing to the CSV file.");
+            e.printStackTrace();
         }
 
     }

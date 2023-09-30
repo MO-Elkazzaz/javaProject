@@ -4,8 +4,10 @@ import java.util.Scanner;
 public class Login {
     public static final String delimiter = ",";
     public static final String csvPath = "D:\\Programing\\Java Files\\src\\LogIn\\Data.csv";
+    public static String[] data;
+
     public static boolean loginStatus = false;
-    public static void login(String csv) {
+    public static String[] login(String csv) {
         try {
             Scanner nameInput = new Scanner(System.in);
             Scanner passInput = new Scanner(System.in);
@@ -13,7 +15,6 @@ public class Login {
             FileReader fr = new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
             String line;
-            String[] data;
             loginStatus = false;
 
             System.out.println("Enter username: ");
@@ -21,7 +22,7 @@ public class Login {
             System.out.println("Enter password: ");
             String strPassword = passInput.next();
 
-            while((line = br.readLine()) != null) {
+            while((line = br.readLine()) != null & (line = br.readLine()) != ",") {
                 data = line.split(delimiter);
                 String userName = data[0];
                 String password = data[1];
@@ -36,13 +37,12 @@ public class Login {
                 login(csvPath);
             }
             br.close();
+
         }
         catch(IOException ioe) {
             ioe.printStackTrace();
         }
-
+        return data;
     }
-    public static void main(String[] args) {
 
-    }
 }
