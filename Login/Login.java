@@ -23,7 +23,7 @@ public class Login {
             System.out.println("Enter password: ");
             String strPassword = passInput.next();
 
-            while((line = br.readLine()) != null & (line = br.readLine()) != "") {
+            while((line = br.readLine()) != null) {
                 //System.out.println();
                 data = line.split(delimiter);
                 //System.out.println(Arrays.toString(data));

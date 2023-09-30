@@ -15,7 +15,7 @@ public class ReplaceCSVRow {
         String conformPassVar;
 
         String csvPath = "D:\\Programing\\Java Files\\src\\LogIn\\Data.csv";
-
+        System.out.println("login first");
         String[] oldUserData = Login.login(csvPath);
         String oldUsername = oldUserData[0];
         String oldPassword = oldUserData[1];
@@ -73,5 +73,6 @@ public class ReplaceCSVRow {
         } else {
             System.out.println("Invalid row index.");
         }
+        System.out.println("your data have updated");
     }
 }

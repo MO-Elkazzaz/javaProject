@@ -9,7 +9,6 @@ public class Remove {
 
         String csvPath = "D:\\Programing\\Java Files\\src\\Login\\Data.csv";
 
-        System.out.println(rowIndex);
 
         List<List<String>> data = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(csvPath))) {
