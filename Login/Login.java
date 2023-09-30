@@ -1,9 +1,10 @@
 package Login;
 import java.io.*;
+import java.util.Arrays;
 import java.util.Scanner;
 public class Login {
     public static final String delimiter = ",";
-    public static final String csvPath = "D:\\Programing\\Java Files\\src\\LogIn\\Data.csv";
+    public static final String csvPath = "D:\\Programing\\Java Files\\src\\Login\\Data.csv";
     public static String[] data;
 
     public static boolean loginStatus = false;
@@ -22,8 +23,10 @@ public class Login {
             System.out.println("Enter password: ");
             String strPassword = passInput.next();
 
-            while((line = br.readLine()) != null & (line = br.readLine()) != ",") {
+            while((line = br.readLine()) != null & (line = br.readLine()) != "") {
+                //System.out.println();
                 data = line.split(delimiter);
+                //System.out.println(Arrays.toString(data));
                 String userName = data[0];
                 String password = data[1];
                 if (strUserName.equals(userName) & strPassword.equals(password)) {

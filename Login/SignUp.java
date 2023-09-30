@@ -35,6 +35,7 @@ public class SignUp {
             String[] userData = { usernameVar, passwordVar};
             String dataLine = String.join(",", userData);
             writer.write(dataLine);
+            writer.newLine();
             writer.close();
             System.out.println("you signed up successfully");
         }

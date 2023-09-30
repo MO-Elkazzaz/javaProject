@@ -1,16 +1,15 @@
 package Login;
+import java.io.IOException;
 import java.util.Scanner;
 public class Main {
 
-
-
     public static final String csvPath = "D:\\Programing\\Java Files\\src\\Login\\Data.csv";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner choiceInput = new Scanner(System.in);
 
         while (true) {
-            System.out.println("Do yo want to\n[1]Login\n[2]SignUp\n[3] Delete\n[4] Create CSV\nEnter (1/2/3/4)");
+            System.out.println("Do yo want to\n[1] Login\n[2] SignUp\n[3] Delete\n[4] Create CSV\n[5] Update username and password\nEnter (1/2/3/4/5)");
 
             String strChoice = choiceInput.next();
 
@@ -34,6 +33,9 @@ public class Main {
                     break;
                 case 4:
                     CreateCSV.create();
+                    break;
+                case 5:
+                    ReplaceCSVRow.replaceCSVRow();
                     break;
                 default:
                     System.out.println("your input is not correct");

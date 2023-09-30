@@ -21,8 +21,7 @@ public class GetRowIndexInCSV {
     }
 
     private static int findRowIndex(String filePath, List<String> targetRowValues) {
-        // Read the CSV file into a list of lists
-        List<List<String>> data = new ArrayList<>();
+        List<List<String>> data = getData();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = br.readLine()) != null) {
@@ -46,6 +45,10 @@ public class GetRowIndexInCSV {
         }
 
         return -1; // Return -1 if the row is not found
+    }
+
+    private static ArrayList<List<String>> getData() {
+        return new ArrayList<>();
     }
 }
 
