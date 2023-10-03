@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ReplaceCSVRow {
-    public static void replaceCSVRow() {
+public class Replace {
+    public static void replace(String csvPath) {
 
         Scanner username = new Scanner(System.in);
         Scanner password = new Scanner(System.in);
@@ -14,12 +14,12 @@ public class ReplaceCSVRow {
         String passwordVar;
         String conformPassVar;
 
-        String csvPath = "D:\\Programing\\Java Files\\src\\LogIn\\Data.csv";
+
         System.out.println("login first");
         String[] oldUserData = Login.login(csvPath);
         String oldUsername = oldUserData[0];
         String oldPassword = oldUserData[1];
-        int rowIndex = GetRowIndexInCSV.getIndex(oldUsername, oldPassword);
+        int rowIndex = GetIndex.getIndex(oldUsername, oldPassword);
 
 
         System.out.println("Enter new username :");

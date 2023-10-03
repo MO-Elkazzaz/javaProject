@@ -2,10 +2,18 @@ package Login;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Scanner;
 
-public class CreateCSV {
+public class Create {
     public static void create() {
-        String filePath = "D:\\Programing\\Java Files\\src\\Login\\Data.csv";
+
+        Scanner name = new Scanner(System.in);
+
+        System.out.println("Enter file name: (without extension)");
+        String nameOfFile = name.next();
+
+
+        String filePath = "D:\\Programing\\Java Files\\src\\Login\\" + nameOfFile + ".csv";
 
         try {
             File file = new File(filePath);

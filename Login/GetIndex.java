@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GetRowIndexInCSV {
+public class GetIndex {
     public static int getIndex(String us, String pass) {
         // Define the path to your CSV file
         String csvPath = "D:\\Programing\\Java Files\\src\\LogIn\\Data.csv";

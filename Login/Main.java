@@ -32,10 +32,10 @@ public class Main {
                     Delete.delete(csvPath);
                     break;
                 case 4:
-                    CreateCSV.create();
+                    Create.create();
                     break;
                 case 5:
-                    ReplaceCSVRow.replaceCSVRow();
+                    Replace.replace(csvPath);
                     break;
                 default:
                     System.out.println("your input is not correct");

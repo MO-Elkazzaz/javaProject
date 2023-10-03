@@ -9,7 +9,7 @@ public class Delete {
         String[] data = Login.login(csvPath);
         String username = data[0];
         String password = data[1];
-        int rowNumber = GetRowIndexInCSV.getIndex(username, password);
+        int rowNumber = GetIndex.getIndex(username, password);
         Remove.removeRow(rowNumber);
         System.out.println("Deletion completed");
     }
