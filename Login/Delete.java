@@ -3,7 +3,6 @@ package Login;
 import java.io.IOException;
 
 public class Delete {
-    public static final String csvPath = "D:\\Programing\\Java Files\\src\\LogIn\\Data.csv";
     public static void delete(String csvPath) throws IOException {
         System.out.println("login first");
         String[] data = Login.login(csvPath);

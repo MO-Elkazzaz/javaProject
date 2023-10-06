@@ -57,7 +57,7 @@ public class Replace {
             e.printStackTrace();
         }
 
-        if (rowIndex >= 0 && rowIndex < data.size()) {
+        if (rowIndex >= 0 & rowIndex < data.size()) {
             data.set(rowIndex, newRowValues);
 
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(csvPath))) {
@@ -73,6 +73,6 @@ public class Replace {
         } else {
             System.out.println("Invalid row index.");
         }
-        System.out.println("your data have updated");
+        System.out.println("your data updated");
     }
 }

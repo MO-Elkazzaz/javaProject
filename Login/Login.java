@@ -1,6 +1,5 @@
 package Login;
 import java.io.*;
-import java.util.Arrays;
 import java.util.Scanner;
 public class Login {
     public static final String delimiter = ",";
@@ -24,9 +23,7 @@ public class Login {
             String strPassword = passInput.next();
 
             while((line = br.readLine()) != null) {
-                //System.out.println();
                 data = line.split(delimiter);
-                //System.out.println(Arrays.toString(data));
                 String userName = data[0];
                 String password = data[1];
                 if (strUserName.equals(userName) & strPassword.equals(password)) {

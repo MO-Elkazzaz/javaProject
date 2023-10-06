@@ -6,14 +6,11 @@ import java.util.List;
 
 public class GetIndex {
     public static int getIndex(String us, String pass) {
-        // Define the path to your CSV file
         String csvPath = "D:\\Programing\\Java Files\\src\\LogIn\\Data.csv";
 
-        // Define the values to search for in the row
         List<String> targetRowValues = new ArrayList<>();
-        targetRowValues.add(us); // Replace with the values you're searching for
-        targetRowValues.add(pass); // Replace with the values you're searching for
-
+        targetRowValues.add(us);
+        targetRowValues.add(pass);
 
         int rowIndex = findRowIndex(csvPath, targetRowValues);
 
@@ -36,15 +33,14 @@ public class GetIndex {
             e.printStackTrace();
         }
 
-        // Iterate through the rows and compare values
         for (int i = 0; i < data.size(); i++) {
             List<String> row = data.get(i);
             if (row.equals(targetRowValues)) {
-                return i; // Return the index if the row matches
+                return i;
             }
         }
 
-        return -1; // Return -1 if the row is not found
+        return -1;
     }
 
     private static ArrayList<List<String>> getData() {

@@ -9,7 +9,7 @@ public class Main {
         Scanner choiceInput = new Scanner(System.in);
 
         while (true) {
-            System.out.println("Do yo want to\n[1] Login\n[2] SignUp\n[3] Delete\n[4] Create CSV\n[5] Update username and password\nEnter (1/2/3/4/5)");
+            System.out.println("Do yo want to\n[1] Login\n[2] SignUp\n[3] Delete\n[4] Update username and password\n[5] Create CSV\nEnter (1/2/3/4/5)");
 
             String strChoice = choiceInput.next();
 
@@ -32,10 +32,10 @@ public class Main {
                     Delete.delete(csvPath);
                     break;
                 case 4:
-                    Create.create();
+                    Replace.replace(csvPath);
                     break;
                 case 5:
-                    Replace.replace(csvPath);
+                    Create.create();
                     break;
                 default:
                     System.out.println("your input is not correct");
